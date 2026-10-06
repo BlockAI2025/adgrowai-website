@@ -1,0 +1,156 @@
+/* ============================================
+   ADGROW AI - DESIGN TOKENS
+   File: enterprise-design-tokens.css
+
+   This file contains ONLY variables and base values.
+   Do NOT put component rules here.
+   ============================================ */
+
+:root {
+  /* ===== NOCTURNE ELECTRIC (Primary accent) =====
+     Nocturne · Electric Solid — see ~/Downloads/DarkModeThemes.html (id 3a) */
+  --blue-primary: #2AE0FF;
+  --blue-hover: #25C3DE;
+  --blue-glow: rgba(42, 224, 255, 0.35);
+  --blue-glow-subtle: rgba(42, 224, 255, 0.15);
+  --blue-surface: rgba(42, 224, 255, 0.22);
+  --blue-border: rgba(42, 224, 255, 0.5);
+  --accent-contrast: #04141A;
+
+  /* ===== WARNING AMBER (Attention) ===== */
+  --amber-primary: #FFCF47;
+  --amber-secondary: #F0B93A;
+  --amber-glow: rgba(255, 207, 71, 0.35);
+  --amber-glow-subtle: rgba(255, 207, 71, 0.15);
+  --amber-surface: rgba(255, 207, 71, 0.22);
+  --amber-border: rgba(255, 207, 71, 0.5);
+
+  /* ===== STATUS COLORS ===== */
+  --status-success: #00F5A0;      /* Green - confirmation ONLY */
+  --status-critical: #FF6D82;     /* Red - urgent */
+  --status-info: var(--blue-primary);
+  --status-warning: var(--amber-primary);
+
+  /* ===== PURPLE ACCENT / "OPPORTUNITY" ===== */
+  --purple-glow: rgba(167, 139, 255, 0.25);
+  --status-opportunity: #A78BFF;
+
+  /* ===== TEAL ACCENT (unchanged — distinct from the cyan accent) ===== */
+  --teal-glow: rgba(20, 184, 166, 0.18);
+  --teal-primary: #14B8A6;
+
+  /* ===== SOLID FILLS + DARK "ON-FILL" TEXT =====
+     Opaque, saturated fills for icon wrappers/badges/tags, with a dark
+     contrasting text/icon color drawn on top (Electric Solid treatment) */
+  --status-success-solid-bg: #00F0A0;
+  --status-success-solid-text: #03170F;
+  --status-critical-solid-bg: #FF3D63;
+  --status-critical-solid-text: #26060D;
+  --status-warning-solid-bg: #FFCF47;
+  --status-warning-solid-text: #271C02;
+  --status-info-solid-bg: #2AE0FF;
+  --status-info-solid-text: #03141A;
+  --status-opportunity-solid-bg: #A78BFF;
+  --status-opportunity-solid-text: #150A33;
+
+  /* ===== DARK MODE BACKGROUNDS ===== */
+  --bg-void: #08090D;
+  --bg-deep: #0C0E14;
+  --bg-surface: #181B23;
+  --bg-elevated: #1E222C;
+  --bg-glass: rgba(24, 27, 35, 0.6);
+  --bg-glass-light: rgba(30, 34, 44, 0.4);
+
+  /* ===== v1.0 COMPAT (design-tokens.css) — redeclared here so it picks up
+     a dark value too; design-tokens.css only ever defined this as light-only ===== */
+  --bg-tertiary: var(--bg-elevated);
+
+  /* ===== LIGHT MODE BACKGROUNDS ===== */
+  /* Dashboard theme (Dashboard.module.css .page) — the default light theme */
+  --bg-light-base: #EAEEF4;
+  --bg-light-surface: #FFFFFF;
+  --bg-light-elevated: #EEF1F6;
+
+  /* ===== SIDEBAR WIDTH ===== */
+  --sidebar-width: 260px;
+
+  /* ===== BORDERS ===== */
+  --border-subtle: #22262F;
+  --border-default: #2B303C;
+  --border-strong: #3A4150;
+
+  /* v1.0 COMPAT (design-tokens.css) — redeclared here so it picks up a dark
+     value too; design-tokens.css only ever defined this as light-only */
+  --border-medium: var(--border-strong);
+
+  /* ===== TEXT - DARK MODE ===== */
+  --text-primary: #F2F4F9;
+  --text-secondary: #C4C9D5;
+  --text-muted: #8B91A1;
+  --text-dim: #8B91A1;
+  --text-faint: #646B7B;
+
+  /* ===== TEXT - LIGHT MODE ===== */
+  /* Dashboard theme (Dashboard.module.css .page) — the default light theme */
+  --text-light-primary: #1C2A4A;
+  --text-light-secondary: #38414F;
+  --text-light-muted: #8893A2;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* ===== GLOW SIZES ===== */
+  --glow-sm: 30px;
+  --glow-md: 60px;
+  --glow-lg: 120px;
+
+  /* ===== RADII ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* ===== TRANSITIONS ===== */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* ===== FONT WEIGHTS ===== */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ===== FONT SIZES ===== */
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+
+  /* ===== SPACING ===== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* ===== STATUS LIGHT BACKGROUNDS ===== */
+  --status-success-light: rgba(0, 245, 160, 0.15);
+  --status-warning-light: rgba(255, 207, 71, 0.15);
+  --status-critical-light: rgba(255, 109, 130, 0.15);
+  --status-opportunity-light: rgba(167, 139, 255, 0.15);
+  --status-info-light: rgba(42, 224, 255, 0.15);
+
+  /* ===== LEGACY COMPATIBILITY ===== */
+  /* These map old variable names to new ones */
+  --accent-primary: var(--blue-primary);
+  --accent-primary-hover: var(--blue-hover);
+  --accent-primary-light: rgba(42, 224, 255, 0.15);
+  --card-bg: var(--bg-glass);
+  --card-border: 1px solid var(--border-default);
+  --border-light: var(--border-default);
+}
