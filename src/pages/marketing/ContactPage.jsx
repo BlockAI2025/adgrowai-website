@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import CTABanner from '../../components/Marketing/CTABanner';
 
+// Formspree form "Website contact" (public by design: browsers see it).
+const CONTACT_FORM_ID = 'xoejveqn';
+
 const ContactPage = () => {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success, error
 
@@ -12,7 +15,7 @@ const ContactPage = () => {
     const data = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch(`https://formspree.io/f/${CONTACT_FORM_ID}`, {
         method: 'POST',
         body: data,
         headers: {

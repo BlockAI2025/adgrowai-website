@@ -182,6 +182,7 @@ const PrivacyPage = () => {
               <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue-primary)' }}>Google Ads</a></li>
               <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue-primary)' }}>Meta Ads</a></li>
               <li><a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue-primary)' }}>OpenAI</a></li>
+              <li><a href="https://formspree.io" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--blue-primary)' }}>Formspree</a>, which handles our contact and data-deletion request forms and passes them to us by email</li>
             </ul>
             <p style={spacer}>We encourage you to review the privacy policies of these services.</p>
 
