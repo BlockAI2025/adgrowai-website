@@ -104,7 +104,7 @@ Please confirm deletion within 30 days as required by Facebook policy.
 Thank you.
     `);
     
-    window.open(`mailto:aman@adgrowai.com?subject=${subject}&body=${body}`);
+    window.open(`mailto:admin@adgrowai.com?subject=${subject}&body=${body}`);
   };
 
   return (
@@ -269,7 +269,7 @@ Thank you.
                 <strong>What happens next:</strong>
                 <br />• We'll delete your data within 30 days
                 <br />• We'll email {email.trim()} when it's done
-                <br />• Questions? Email aman@adgrowai.com and quote your reference
+                <br />• Questions? Email admin@adgrowai.com and quote your reference
               </Typography>
             </Alert>
           )}
@@ -339,7 +339,7 @@ Thank you.
               Questions About Data Deletion?
             </Typography>
             <Typography variant="body2">
-              <strong>Email:</strong> aman@adgrowai.com
+              <strong>Email:</strong> admin@adgrowai.com
               <br /><strong>Subject:</strong> "Facebook Data Deletion - Adgrow AI"
               <br /><strong>Website:</strong> <a href="https://www.adgrowai.com" target="_blank" rel="noopener noreferrer">www.adgrowai.com</a>
               <br /><strong>Privacy Policy:</strong> <a href="/privacy">View our complete Privacy Policy</a>

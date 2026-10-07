@@ -106,7 +106,7 @@ const TermsPage = () => {
             <p style={spacer}><strong style={{ color: 'var(--text-primary)' }}>AdgrowAI Limited</strong></p>
             <p>NZ Company No. 9418222 | NZBN 9429053564504</p>
             <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-            <p>Email: <a href="mailto:aman@adgrowai.com" style={{ color: 'var(--blue-primary)' }}>aman@adgrowai.com</a></p>
+            <p>Email: <a href="mailto:admin@adgrowai.com" style={{ color: 'var(--blue-primary)' }}>admin@adgrowai.com</a></p>
             <p>Website: <a href="https://www.adgrowai.com" style={{ color: 'var(--blue-primary)' }}>www.adgrowai.com</a></p>
           </div>
         </div>

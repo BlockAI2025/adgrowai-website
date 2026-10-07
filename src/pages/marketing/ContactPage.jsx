@@ -135,7 +135,7 @@ const ContactPage = () => {
                 </div>
                 <div className="mkt-contact-info-content">
                   <h3>Email</h3>
-                  <p>aman@adgrowai.com</p>
+                  <p>admin@adgrowai.com</p>
                 </div>
               </div>
 

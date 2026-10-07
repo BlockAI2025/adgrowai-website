@@ -89,7 +89,7 @@ const Privacy = () => {
                 <Button
                   variant="outlined"
                   startIcon={<Email />}
-                  href="mailto:aman@adgrowai.com?subject=Privacy Inquiry"
+                  href="mailto:admin@adgrowai.com?subject=Privacy Inquiry"
                   sx={{ color: 'white', borderColor: 'white', '&:hover': { backgroundColor: 'rgba(255,255,255,0.1)' } }}
                 >
                   Contact Privacy Team
@@ -428,7 +428,7 @@ const Privacy = () => {
               
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body2">
-                  <strong>Privacy Officer:</strong> aman@adgrowai.com<br/>
+                  <strong>Privacy Officer:</strong> admin@adgrowai.com<br/>
                   <strong>Website:</strong> <a href="https://www.adgrowai.com" target="_blank" rel="noopener noreferrer">www.adgrowai.com</a><br/>
                   <strong>Subject Line:</strong> "Privacy Policy Inquiry" or "Data Rights Request"<br/>
                   <strong>Response Time:</strong> We'll respond within 72 hours
@@ -452,7 +452,7 @@ const Privacy = () => {
                 <Button
                   variant="outlined"
                   startIcon={<Email />}
-                  href="mailto:aman@adgrowai.com?subject=Privacy Policy Inquiry"
+                  href="mailto:admin@adgrowai.com?subject=Privacy Policy Inquiry"
                   sx={{ 
                     borderColor: 'primary.main',
                     color: 'primary.main',
@@ -489,7 +489,7 @@ const Privacy = () => {
               <a href="/delete-data" style={{ marginLeft: '8px', textDecoration: 'none', color: '#2563eb' }}>Request Data Deletion</a>
             </Typography>
             <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 2 }}>
-              Adgrow AI - AI-Powered Marketing Automation Platform | www.adgrowai.com | aman@adgrowai.com
+              Adgrow AI - AI-Powered Marketing Automation Platform | www.adgrowai.com | admin@adgrowai.com
             </Typography>
           </Box>
         </Paper>

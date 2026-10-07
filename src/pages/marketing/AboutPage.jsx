@@ -272,7 +272,7 @@ const AboutPage = () => {
             {' '}&mdash; Registered in New Zealand<br />
             NZ Company No. 9418222 | NZBN 9429053564504<br />
             Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand<br />
-            Contact: <a href="mailto:aman@adgrowai.com" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>aman@adgrowai.com</a>
+            Contact: <a href="mailto:admin@adgrowai.com" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>admin@adgrowai.com</a>
           </div>
         </div>
       </section>

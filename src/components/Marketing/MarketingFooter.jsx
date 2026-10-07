@@ -68,7 +68,7 @@ export default function MarketingFooter() {
         <div className="mkt-footer-legal-entity">
           <strong>AdgrowAI Limited</strong> &mdash; NZ Company No. 9418222 | NZBN 9429053564504<br />
           Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand<br />
-          Contact: <a href="mailto:aman@adgrowai.com" className="mkt-footer-legal-link">aman@adgrowai.com</a>
+          Contact: <a href="mailto:admin@adgrowai.com" className="mkt-footer-legal-link">admin@adgrowai.com</a>
         </div>
 
         <div className="mkt-footer-bottom">
