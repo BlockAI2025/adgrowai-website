@@ -27,38 +27,59 @@ import {
 } from '@mui/icons-material';
 import adgrowIcon from '../../assets/logos/adgrow-icon.png';
 
+// Formspree form "Data deletion requests" (public by design: browsers see it).
+const DELETION_FORM_ID = 'mwlvplka';
+
 const DeleteData = () => {
   const [userId, setUserId] = useState('');
   const [email, setEmail] = useState('');
   const [confirmationCode, setConfirmationCode] = useState('');
   const [status, setStatus] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
   React.useEffect(() => {
     document.title = 'Data Deletion Request - Adgrow AI';
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!userId.trim()) {
       setStatus('Please enter your App-Scoped User ID');
       return;
     }
+    if (!email.trim()) {
+      setStatus('Please enter an email address so we can confirm when your data is deleted');
+      return;
+    }
 
-    // Meta requires specific confirmation message
-    setStatus('Data deletion request submitted successfully. Your data will be deleted within 30 days. Confirmation ID: ADG-DEL-' + Date.now());
-    setSubmitted(true);
-    
-    // Log the deletion request (in production, this would go to your backend)
-    console.log('Meta Data Deletion Request:', {
-      app_scoped_user_id: userId.trim(),
-      email: email.trim(),
-      timestamp: new Date().toISOString(),
-      confirmation_code: 'ADG-DEL-' + Date.now(),
-      status: 'submitted',
-      platform: 'Adgrow AI'
-    });
+    // Sent to Formspree, which emails the request to admin@adgrowai.com. Deletion
+    // is done by hand, so only confirm receipt once the request has been delivered.
+    const reference = 'ADG-DEL-' + Date.now();
+    setSending(true);
+    setStatus('');
+    try {
+      const response = await fetch(`https://formspree.io/f/${DELETION_FORM_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `Data deletion request ${reference}`,
+          reference,
+          app_scoped_user_id: userId.trim(),
+          email: email.trim(),
+          additional_information: confirmationCode.trim(),
+          requested_at: new Date().toISOString()
+        })
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      setStatus(reference);
+      setSubmitted(true);
+    } catch (error) {
+      setStatus('We couldn\'t send your request just now. Please try again, or use Email Request below.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleEmailDeletion = () => {
@@ -169,12 +190,13 @@ Thank you.
 
               <TextField
                 fullWidth
+                required
                 label="Contact Email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 margin="normal"
-                helperText="We'll send deletion confirmation to this email"
+                helperText="Required: we'll email you here when your data has been deleted"
                 placeholder="your.email@example.com"
                 sx={{ mb: 2 }}
               />
@@ -202,6 +224,7 @@ Thank you.
                   type="submit"
                   variant="contained"
                   size="large"
+                  disabled={sending}
                   startIcon={<Delete />}
                   sx={{ 
                     flex: 1, 
@@ -211,7 +234,7 @@ Thank you.
                     }
                   }}
                 >
-                  Submit Deletion Request
+                  {sending ? 'Sending…' : 'Submit Deletion Request'}
                 </Button>
                 
                 <Button
@@ -237,16 +260,16 @@ Thank you.
             <Alert severity="success" sx={{ mt: 3, borderRadius: 2 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <CheckCircle sx={{ mr: 1 }} />
-                <Typography variant="h6">Data Deletion Request Confirmed</Typography>
+                <Typography variant="h6">Request received</Typography>
               </Box>
               <Typography variant="body1" sx={{ mb: 2 }}>
-                {status}
+                We've received your data deletion request. Your reference is <strong>{status}</strong>.
               </Typography>
               <Typography variant="body2">
                 <strong>What happens next:</strong>
-                <br />• Your request has been logged and will be processed within 30 days
-                <br />• You will receive email confirmation when deletion is complete
-                <br />• All Facebook-related data will be permanently removed
+                <br />• We'll delete your data within 30 days
+                <br />• We'll email {email.trim()} when it's done
+                <br />• Questions? Email aman@adgrowai.com and quote your reference
               </Typography>
             </Alert>
           )}

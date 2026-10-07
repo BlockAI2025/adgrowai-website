@@ -269,6 +269,12 @@ const Privacy = () => {
                     />
                   </ListItem>
                   <ListItem>
+                    <ListItemText
+                      primary="Form Handling"
+                      secondary="Contact and data-deletion requests are handled through Formspree, which passes them to us by email"
+                    />
+                  </ListItem>
+                  <ListItem>
                     <ListItemText 
                       primary="Legal Requirements"
                       secondary="When required by law or to protect our rights and the safety of our users"
