@@ -24,9 +24,8 @@ export const CONTACT_EMAIL = 'admin@adgrowai.com';
 export const FORM_ENDPOINTS = {
   // Same Formspree form the current site's waitlist uses.
   waitlist: 'https://formspree.io/f/maqddere',
-  // TODO: create a Formspree form for contact messages and add its URL here.
-  // Until then the contact form shows an error asking people to email us.
-  contact: null,
+  // Same Formspree form the current site's contact page uses.
+  contact: 'https://formspree.io/f/xoejveqn',
 };
 
 /** Google Ads tag carried over from the current site; records waitlist sign-ups. Set to null to disable. */
