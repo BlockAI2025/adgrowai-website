@@ -66,8 +66,8 @@ export default function PrivacyPage() {
       <p>NZ Company Number: 9418222</p>
       <p>NZBN: 9429053564504</p>
       <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-      <p>Email: <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a></p>
-      <p className={styles.spaced}>For any questions about how your data is handled, or to exercise your data rights, contact us at <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>.</p>
+      <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
+      <p className={styles.spaced}>For any questions about how your data is handled, or to exercise your data rights, contact us at <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>.</p>
 
       <h2>6. Legal Basis for Processing (GDPR)</h2>
       <p>For users in the European Economic Area (EEA) and United Kingdom, we process your personal data on the following legal bases:</p>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
         <li><strong>Support communications:</strong> Retained for 24 months for quality and training purposes.</li>
         <li><strong>Legal and compliance records:</strong> Retained as required by applicable law, typically up to 7 years.</li>
       </ul>
-      <p className={styles.spaced}>You may request immediate deletion of your data at any time by emailing <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
+      <p className={styles.spaced}>You may request immediate deletion of your data at any time by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
 
       <h2>10. International Data Transfers</h2>
       <p>AdgrowAI Limited is based in New Zealand. Our service providers may be located in the United States, European Union, and other jurisdictions. This means your personal data may be transferred to, stored in, and processed in countries outside your country of residence.</p>
@@ -128,7 +128,7 @@ export default function PrivacyPage() {
         <li>Request portability of your data in a machine-readable format.</li>
         <li>Withdraw consent where processing is based on consent.</li>
       </ul>
-      <p className={styles.spaced}>To exercise any of these rights, contact us at <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>.</p>
+      <p className={styles.spaced}>To exercise any of these rights, contact us at <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>.</p>
       <p className={styles.spaced}>For users in California, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what categories of personal information we collect, the right to request deletion, and the right to opt out of the sale of personal information. AdgrowAI Limited does not sell personal information as defined by the CCPA.</p>
       <p className={styles.spaced}>For users in the EEA and UK, you have the right to lodge a complaint with your local data protection authority if you believe we have not handled your data appropriately.</p>
 
@@ -152,7 +152,7 @@ export default function PrivacyPage() {
       <p className={styles.spaced}><strong>AdgrowAI Limited</strong></p>
       <p>NZ Company No. 9418222 | NZBN 9429053564504</p>
       <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-      <p>Email: <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a></p>
+      <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
       <p>Website: <a href="https://www.adgrowai.com">www.adgrowai.com</a></p>
 
       <h2>16. Governing Law</h2>
