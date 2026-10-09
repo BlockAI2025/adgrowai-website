@@ -16,6 +16,11 @@ export async function joinWaitlist(formData) {
   window.gtag?.('event', 'sign_up', { method: 'waitlist' });
 }
 
+/** Sends a data deletion request from /delete-data. Rejects unless Formspree accepted it. */
+export async function sendDeletionRequest(formData) {
+  await submitForm(FORM_ENDPOINTS.deletion, formData);
+}
+
 /** Sends a message from the contact form on the About page. */
 export async function sendContactMessage(formData) {
   await submitForm(FORM_ENDPOINTS.contact, formData);

@@ -26,6 +26,8 @@ export const FORM_ENDPOINTS = {
   waitlist: 'https://formspree.io/f/maqddere',
   // Same Formspree form the current site's contact page uses.
   contact: 'https://formspree.io/f/xoejveqn',
+  // Data deletion requests (/delete-data); same form the current site uses.
+  deletion: 'https://formspree.io/f/mwlvplka',
 };
 
 /** Google Ads tag carried over from the current site; records waitlist sign-ups. Set to null to disable. */
