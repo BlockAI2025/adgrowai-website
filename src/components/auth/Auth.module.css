@@ -1,0 +1,281 @@
+/* Page and card */
+
+.section {
+  min-height: 100vh;
+  padding: 124px clamp(16px, 4vw, 48px) 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  box-shadow: var(--shadow);
+  padding: clamp(28px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.markCircle {
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid var(--line2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark {
+  width: 58%;
+  height: auto;
+}
+
+.title {
+  margin: 6px 0 0;
+  font-size: clamp(36px, 4vw, 48px);
+  line-height: .95;
+}
+
+.subtitle {
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--fg2);
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Input with a leading icon and optional trailing button */
+.control {
+  position: relative;
+  display: flex;
+}
+
+.icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+  color: var(--fg4);
+  pointer-events: none;
+}
+
+.reveal {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: var(--fg3);
+}
+
+.reveal:hover {
+  color: var(--fg);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--fg3);
+}
+
+.optionsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--fg2);
+  cursor: pointer;
+}
+
+.checkboxInput {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accBg);
+  cursor: pointer;
+}
+
+/* Multi-line checkbox label (terms agreement) */
+.checkboxTop {
+  align-items: flex-start;
+  line-height: 1.45;
+}
+
+.checkboxTop .checkboxInput {
+  flex: none;
+  margin-top: 2px;
+}
+
+.textLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--acc);
+}
+
+.textLink:hover {
+  text-decoration: underline;
+}
+
+.inlineLink {
+  font-weight: 500;
+  color: var(--acc);
+}
+
+.submit {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px;
+  background: var(--accBg);
+  color: var(--accInk);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.submit:hover {
+  filter: brightness(1.1);
+}
+
+.submit:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+/* "OR CONTINUE WITH" divider and social buttons */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: var(--line2);
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.socialButton {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid var(--line2);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.socialButton:hover {
+  border-color: var(--fg3);
+  background: var(--bg3);
+}
+
+.switch {
+  text-align: center;
+  font-size: 15px;
+  color: var(--fg2);
+}
+
+.switchLink {
+  font-weight: 500;
+  color: var(--acc);
+}
+
+/* Success state */
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.successIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ok);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.successTitle {
+  font-size: 28px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+}
+
+.backLink {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--acc);
+}

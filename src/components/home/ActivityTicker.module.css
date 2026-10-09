@@ -1,0 +1,46 @@
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--line2);
+  border-bottom: 1px solid var(--line2);
+  background: var(--bg2);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-family: var(--mono);
+  font-size: 12px;
+  white-space: nowrap;
+  border-right: 1px solid var(--line);
+}
+
+.time {
+  color: var(--fg4);
+}
+
+.kind {
+  font-weight: 600;
+  letter-spacing: .1em;
+  font-size: 10.5px;
+  color: var(--fg3);
+}
+
+.kind[data-kind='WASTE'] {
+  color: var(--warn);
+}
+
+.kind[data-kind='FIXED'] {
+  color: var(--acc);
+}
+
+.message {
+  color: var(--fg2);
+}

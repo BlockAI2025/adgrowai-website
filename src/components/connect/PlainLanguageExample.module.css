@@ -1,0 +1,61 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--mono);
+}
+
+.raw {
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+.rawLabel {
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.rawGrid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 18px;
+  color: var(--fg3);
+}
+
+.rawValue {
+  color: var(--fg);
+}
+
+.arrow {
+  align-self: center;
+  color: var(--acc);
+  font-size: 14px;
+}
+
+.plain {
+  border: 1px solid var(--acc);
+  background: var(--accSoft);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plainLabel {
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.plainText {
+  font-family: var(--sans);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--fg);
+}

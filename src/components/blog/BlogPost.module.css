@@ -1,0 +1,257 @@
+.article {
+  padding: 132px var(--gutter) clamp(72px, 9vw, 120px);
+}
+
+.column {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.back {
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
+
+.backBottom {
+  margin-top: 28px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 18px 0 36px;
+  border-bottom: 1px solid var(--line2);
+  margin-bottom: 14px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
+
+.title {
+  font-size: clamp(44px, 6vw, 80px);
+  line-height: .9;
+  text-wrap: balance;
+}
+
+/* The article text */
+
+.column p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+.column h2 {
+  margin: 40px 0 0;
+  font-weight: 600;
+  font-stretch: 84%;
+  text-transform: uppercase;
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: .95;
+  text-wrap: balance;
+}
+
+.column blockquote {
+  margin: 10px 0;
+  padding: 28px 0;
+  border-top: 1px solid var(--line2);
+  border-bottom: 1px solid var(--line2);
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.05;
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+.column strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+/* Opening line, larger than the body */
+.column .standfirst {
+  font-size: clamp(21px, 2vw, 25px);
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+/* A body paragraph that carries the point */
+.column .emphasis {
+  font-weight: 500;
+  color: var(--fg);
+}
+
+/* Closing line, set like a heading */
+.column .closing {
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line2);
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  font-size: clamp(24px, 2.6vw, 32px);
+  line-height: 1.1;
+  color: var(--fg);
+  text-wrap: balance;
+}
+
+/* "01  Title  FIGURE" numbered subheading */
+.point {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+}
+
+.pointIndex {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--acc);
+}
+
+.pointTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.pointFigure {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--warn);
+}
+
+/* List of example search terms, each with a note */
+.terms {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.terms li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.term {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.termNote {
+  font-size: 16px;
+  color: var(--fg3);
+}
+
+/* Cost breakdown table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+}
+
+.table th {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--line2);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-align: left;
+  color: var(--fg3);
+}
+
+.table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+  color: var(--fg2);
+}
+
+.table :is(th, td):last-child {
+  text-align: right;
+}
+
+.table td:last-child {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.table tfoot td {
+  border-bottom: 0;
+  background: var(--bg3);
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.table tfoot td:last-child {
+  color: var(--warn);
+}
+
+/* Example Adgrow recommendations */
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recommendation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+}
+
+.recommendationLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.recommendationText {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+/* Small print, e.g. under a table */
+.column .note {
+  margin-top: -10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fg3);
+}

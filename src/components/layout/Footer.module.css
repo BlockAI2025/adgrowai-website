@@ -1,0 +1,87 @@
+.footer {
+  border-top: 1px solid var(--line2);
+  padding: 56px var(--gutter) 0;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 340px;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  align-self: flex-start;
+}
+
+.tagline {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--fg3);
+}
+
+.columns {
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  color: var(--fg4);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg4);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Giant outlined ADGROW at the very bottom */
+.wordmark {
+  font-weight: 800;
+  font-stretch: 125%;
+  font-size: clamp(80px, 19vw, 280px);
+  line-height: .72;
+  letter-spacing: -.02em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line2);
+  text-align: center;
+  margin-bottom: -.05em;
+  user-select: none;
+}

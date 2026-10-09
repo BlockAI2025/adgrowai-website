@@ -1,0 +1,163 @@
+/* Hero */
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+  gap: 40px 64px;
+  align-items: end;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.heroText {
+  max-width: 48ch;
+}
+
+/* Monthly / annual toggle */
+.billing {
+  display: flex;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line2);
+}
+
+.billing button {
+  all: unset;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--fg3);
+}
+
+.billing button[aria-pressed='true'] {
+  background: var(--accBg);
+  color: var(--accInk);
+}
+
+.note {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg4);
+}
+
+/* Plan cards */
+
+.plansSection {
+  padding: 56px var(--gutter) 0;
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+}
+
+.plan {
+  position: relative;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.planFeatured {
+  border-color: var(--acc);
+}
+
+.planHead {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.planCode {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.planName {
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+}
+
+.planTagline {
+  font-size: 15px;
+  color: var(--fg3);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.priceAmount {
+  font-size: 60px;
+  font-weight: 600;
+  font-stretch: 84%;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.priceNote {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--fg3);
+}
+
+.limits {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg3);
+}
+
+.limits span:first-child {
+  color: var(--fg);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--fg2);
+}
+
+.cta {
+  margin-top: auto;
+  text-align: center;
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  border: 1px solid var(--accBg);
+  background: transparent;
+  color: var(--fg);
+}
+
+.ctaPrimary {
+  background: var(--accBg);
+  color: var(--accInk);
+}

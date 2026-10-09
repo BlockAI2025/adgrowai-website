@@ -1,0 +1,160 @@
+/* Hero */
+
+.hero {
+  padding: 132px var(--gutter) 64px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: clamp(40px, 5vw, 64px);
+  align-items: center;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.heroTitle {
+  font-size: clamp(40px, 4.8vw, 70px);
+  line-height: .92;
+  text-wrap: balance;
+}
+
+.heroLead {
+  max-width: 46ch;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.heroButton {
+  display: flex;
+  align-items: center;
+  padding: 17px 24px;
+  border: 1px solid var(--line2);
+  background: var(--bg);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--fg);
+}
+
+.heroButtonPrimary {
+  border-color: var(--accBg);
+  background: var(--accBg);
+  color: var(--accInk);
+}
+
+.heroChecks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+/* [01] What we analyse */
+
+.measure50 {
+  max-width: 50ch;
+}
+
+.areas {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+.area {
+  background: var(--bg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.areaHead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+}
+
+.areaKind {
+  color: var(--fg4);
+}
+
+.areaTitle {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.areaText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--fg3);
+  text-wrap: pretty;
+}
+
+.areaChecks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg2);
+}
+
+/* [02] Principles under the recommendations demo */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 16px;
+}
+
+.principle {
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 240px;
+}
+
+.principleIndex {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.principleTitle {
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.principleText {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--fg3);
+}
