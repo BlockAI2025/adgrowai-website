@@ -17,6 +17,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Account Information:</strong> Name, email address, and password when you create an account.</li>
         <li><strong>Business Profile Data:</strong> Business name, industry, website URL, target audience, advertising budget, and campaign objectives provided during onboarding.</li>
+        <li><strong>Waitlist Information:</strong> When you join the waitlist on our website: your name, email address, business name and location, and optionally your website and a description of your business. It is sent to us through Formspree and used to contact you about access to AdgrowAI.</li>
         <li><strong>Advertising Platform Data:</strong> When you connect your Google Ads or Meta Ads accounts via OAuth, we access campaign performance data (impressions, clicks, conversions, cost, keyword metrics). We do NOT store your Google or Meta login credentials.</li>
         <li><strong>Usage Data:</strong> Pages visited, features used, actions taken, timestamps, device and browser information.</li>
         <li><strong>Cookies:</strong> When you sign in to app.adgrowai.com, a sign-in token is stored in your browser&apos;s local storage and sent with each request. It expires after a limited time and is removed when you sign out. Our server may also set an httpOnly cookie containing the same token.</li>
