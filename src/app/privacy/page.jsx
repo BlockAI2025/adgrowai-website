@@ -55,7 +55,7 @@ export default function PrivacyPage() {
           <li>We do <strong>not</strong> use Meta platform data for advertising or marketing to end users.</li>
           <li>We do <strong>not</strong> use Meta platform data to build user profiles or identify individuals.</li>
           <li>You may disconnect your Meta Ads account at any time through your account settings, which will stop all further data access.</li>
-          <li>Upon account deletion or disconnection, Meta platform data is deleted from our systems within 30 days.</li>
+          <li>You can ask us to delete your Meta platform data at any time using our <a href="/delete-data">data deletion form</a>; we complete deletion requests within 30 days.</li>
         </ul>
         <p className={styles.spaced}>Our use of information received from Meta Platforms adheres to the <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener noreferrer">Meta Platform Terms</a> and <a href="https://developers.facebook.com/devpolicy/" target="_blank" rel="noopener noreferrer">Developer Policies</a>.</p>
       </div>
