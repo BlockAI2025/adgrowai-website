@@ -41,7 +41,7 @@ export default function TermsPage() {
       <h2>4. Subscription and Payment</h2>
       <ul>
         <li>AdgrowAI offers paid subscription plans.</li>
-        <li>Subscriptions are billed on a recurring basis unless cancelled.</li>
+        <li>Fees and billing terms are agreed when you subscribe.</li>
         <li>We reserve the right to modify pricing with reasonable notice.</li>
       </ul>
 
