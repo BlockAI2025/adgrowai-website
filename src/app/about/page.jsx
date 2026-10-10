@@ -200,7 +200,7 @@ export default function AboutPage() {
                 <div className={styles.address}>
                   <span className={styles.company}>AdgrowAI Limited</span>
                   <span className={styles.companyNumbers}>NZ Company No. 9418222 | NZBN 9429053564504</span>
-                  <span>641 Pahi Rd, Pahi, Pahi 0571, New Zealand</span>
+                  <span>641 Pahi Rd, Pahi 0571, New Zealand</span>
                 </div>
               </div>
               <div className={styles.detail}>
