@@ -98,15 +98,15 @@ export default function PrivacyPage() {
       <p className={styles.spaced}>No method of transmission or storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
 
       <h2>9. Data Retention</h2>
-      <p>We retain your data for the following periods:</p>
+      <p>We retain your data as follows:</p>
       <ul>
-        <li><strong>Account data (name, email, business profile):</strong> Retained while your account is active, and for 90 days after account deletion to allow for recovery.</li>
-        <li><strong>Advertising platform data (Google Ads, Meta Ads metrics):</strong> Retained while the connection is active. Deleted within 30 days of account disconnection or deletion.</li>
-        <li><strong>Execution plans and optimization history:</strong> Retained for 12 months to enable learning and performance tracking, then anonymized or deleted.</li>
-        <li><strong>Support communications:</strong> Retained for 24 months for quality and training purposes.</li>
+        <li><strong>Account data (name, email, business profile):</strong> Retained while your account exists. If you delete your account in the app, we deactivate it and delete your business profile straight away; the rest of your account data is deleted on request.</li>
+        <li><strong>Advertising platform data (Google Ads, Meta Ads metrics):</strong> Retained while your account exists. Disconnecting an advertising account stops further access to it; data already collected is deleted on request.</li>
+        <li><strong>Execution plans and optimization history:</strong> Retained while your account exists, to track results and improve recommendations; deleted on request.</li>
+        <li><strong>Support communications:</strong> Retained for as long as we need them to help you; deleted on request.</li>
         <li><strong>Legal and compliance records:</strong> Retained as required by applicable law, typically up to 7 years.</li>
       </ul>
-      <p className={styles.spaced}>You may request immediate deletion of your data at any time using our <a href="/delete-data">data deletion form</a> or by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
+      <p className={styles.spaced}>You may request deletion of your data at any time using our <a href="/delete-data">data deletion form</a> or by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. We complete deletion requests within 30 days. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
 
       <h2>10. International Data Transfers</h2>
       <p>AdgrowAI Limited is based in New Zealand. Our service providers may be located in the United States, European Union, and other jurisdictions. This means your personal data may be transferred to, stored in, and processed in countries outside your country of residence.</p>
