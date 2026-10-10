@@ -116,7 +116,7 @@ export default function PrivacyPage() {
         <li>Data processing agreements with all third-party providers.</li>
         <li>New Zealand&apos;s privacy laws, which provide protections comparable to GDPR principles.</li>
       </ul>
-      <p className={styles.spaced}>Our primary service providers include: OpenAI (United States), Railway (United States), Vercel (United States), MongoDB Atlas (United States), Resend (United States), Google (United States), and Meta (United States).</p>
+      <p className={styles.spaced}>Our primary service providers include: OpenAI (United States), Railway (United States), Vercel (United States), MongoDB Atlas (United States), Resend (United States), Formspree (United States), Cloudflare (United States), Google (United States), and Meta (United States).</p>
 
       <h2>11. Your Rights</h2>
       <p>You have the right to:</p>
@@ -138,6 +138,8 @@ export default function PrivacyPage() {
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Ads</a></li>
         <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta Ads</a></li>
         <li><a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer">OpenAI</a></li>
+        <li><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree</a>, which receives the contact, waitlist and data deletion forms on this website and emails them to us.</li>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>, which provides DNS, security and content delivery for adgrowai.com and processes visitors&apos; IP addresses and requests to do so.</li>
       </ul>
       <p className={styles.spaced}>We encourage you to review the privacy policies of these services.</p>
 
