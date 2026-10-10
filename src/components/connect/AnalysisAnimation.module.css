@@ -1,0 +1,232 @@
+/* Title bar headings cross-fade in the same spot */
+.headings {
+  display: grid;
+}
+
+.heading {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headingReady {
+  color: var(--acc);
+  opacity: 0;
+}
+
+/* Scan and results panes share one grid cell */
+.panes {
+  display: grid;
+}
+
+.scanPane {
+  grid-area: 1 / 1;
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scanRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.scanHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.scanLabel {
+  color: var(--fg);
+}
+
+.scanCount {
+  color: var(--fg4);
+}
+
+.scanStatus {
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+.scanTrack {
+  height: 3px;
+  background: var(--line);
+}
+
+.scanBar {
+  height: 3px;
+  width: 0;
+  background: var(--fg3);
+}
+
+/* Results */
+.resultsPane {
+  grid-area: 1 / 1;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.result {
+  background: var(--bg2);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.resultLabel {
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.pieRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pie {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  transform: rotate(-90deg);
+}
+
+.pie circle {
+  fill: none;
+  stroke-width: 12;
+}
+
+.pieTrack {
+  stroke: var(--line);
+}
+
+.pieWorking {
+  stroke: var(--acc);
+  stroke-dasharray: 0 100;
+}
+
+.pieWasted {
+  stroke: var(--warn);
+  stroke-dasharray: 0 100;
+  stroke-dashoffset: -77;
+}
+
+.pieLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+.pieKey {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg2);
+}
+
+.swatch {
+  width: 8px;
+  height: 8px;
+}
+
+.swatchWorking {
+  background: var(--acc);
+}
+
+.swatchWasted {
+  background: var(--warn);
+}
+
+.wasteResult {
+  gap: 10px;
+}
+
+.wasteValue {
+  font-family: var(--sans);
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: 84%;
+  line-height: .9;
+  color: var(--warn);
+}
+
+.wasteNote {
+  font-size: 11px;
+  letter-spacing: .08em;
+  line-height: 1.5;
+  color: var(--fg3);
+}
+
+.chartResult {
+  grid-column: 1 / -1;
+  gap: 12px;
+}
+
+.chartHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.callsTag {
+  color: var(--warn);
+  opacity: 0;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.band {
+  fill: var(--warnSoft);
+  opacity: 0;
+}
+
+.baseline {
+  fill: none;
+  stroke: var(--line2);
+  stroke-width: 1;
+}
+
+.area {
+  fill: var(--accSoft);
+  opacity: 0;
+}
+
+.line {
+  fill: none;
+  stroke: var(--acc);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.drop {
+  fill: var(--warn);
+  opacity: 0;
+}

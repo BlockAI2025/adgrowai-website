@@ -1,0 +1,71 @@
+/* Hero */
+
+.title {
+  max-width: 15ch;
+}
+
+.heroText {
+  max-width: 62ch;
+}
+
+.jumpLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
+
+.jumpLink {
+  padding: 7px 10px;
+  border: 1px solid var(--line2);
+}
+
+.jumpArrow {
+  padding: 7px 0;
+}
+
+/* Sections */
+
+.anchor {
+  scroll-margin-top: 10px;
+}
+
+.simulationTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.measure50 {
+  max-width: 50ch;
+}
+
+/* "See what Adgrow finds" call to action */
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 26px;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+}
+
+.ctaText {
+  font-size: 20px;
+}
+
+.ctaButton {
+  padding: 15px 22px;
+  background: var(--accBg);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--accInk);
+}

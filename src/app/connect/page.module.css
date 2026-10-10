@@ -1,0 +1,43 @@
+/* Hero */
+
+.title {
+  max-width: 16ch;
+}
+
+.heroText {
+  max-width: 62ch;
+}
+
+/* What's included */
+
+.included {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.feature {
+  background: var(--bg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureCode {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.featureTitle {
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: 88%;
+  text-transform: uppercase;
+}
+
+.featureText {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--fg3);
+}

@@ -1,0 +1,129 @@
+.panel {
+  min-width: 0;
+}
+
+/* Conversation (Adgrow on) */
+
+.chat {
+  min-height: 400px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.question {
+  align-self: flex-end;
+  max-width: 82%;
+  padding: 11px 14px;
+  background: var(--bg);
+  border: 1px solid var(--line2);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--fg);
+}
+
+.answer {
+  max-width: 94%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--acc);
+  background: var(--accSoft);
+}
+
+.answerLabel {
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.answerText {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+.answerText[data-pending='true'] {
+  color: var(--fg3);
+}
+
+.answerMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+}
+
+.followUps {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.followUpsLabel {
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  all: unset;
+  cursor: pointer;
+  padding: 9px 12px;
+  border: 1px solid var(--line2);
+  background: var(--bg);
+  font-size: 12px;
+  color: var(--fg2);
+}
+
+/* No one to ask (Adgrow off) */
+
+.offline {
+  min-height: 400px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.offlineLabel {
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--warn);
+}
+
+.offlineText {
+  font-family: var(--sans);
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--fg2);
+  max-width: 34ch;
+}
+
+.reports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--fg4);
+}
+
+.report {
+  padding: 6px 9px;
+  border: 1px solid var(--line2);
+}

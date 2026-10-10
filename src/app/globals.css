@@ -1,0 +1,211 @@
+/*
+ * Global styles for the Adgrow website.
+ *
+ *   1. Design tokens — colours and fonts for the dark and light themes
+ *   2. Base element styles
+ *   3. Shared building blocks used on several pages
+ *
+ * Everything here sits in a cascade layer, so styles in a component's CSS
+ * module always win over these defaults without fighting specificity.
+ */
+
+@layer tokens, base, components;
+
+/* 1. Design tokens ─────────────────────────────────────────────────────── */
+
+@layer tokens {
+  /* Dark is the default theme; <html data-theme="light"> switches to light. */
+  :root,
+  [data-theme='dark'] {
+    color-scheme: dark;
+    --bg: #0A0E16;                       /* page background */
+    --bg2: #0D121C;                      /* panels and cards */
+    --bg3: #0F1420;                      /* inputs and hover fills */
+    --fg: #E6EAF2;                       /* headings, primary text */
+    --fg2: #AEB6C6;                      /* body copy */
+    --fg3: #8A93A6;                      /* secondary labels */
+    --fg4: #737D90;                      /* tertiary labels */
+    --line: rgba(230, 234, 242, .08);    /* hairline dividers */
+    --line2: rgba(230, 234, 242, .16);   /* borders */
+    --grid: rgba(230, 234, 242, .03);    /* blueprint grid lines */
+    --acc: #3BE0F0;                      /* accent text, borders, strokes */
+    --accBg: #3BE0F0;                    /* accent fill (primary buttons) */
+    --accInk: #0A0E16;                   /* text on an accent fill */
+    --accSoft: rgba(59, 224, 240, .10);
+    --warn: #F5B544;
+    --warnSoft: rgba(245, 181, 68, .09);
+    --ok: #4ADE80;
+    --nav: rgba(10, 14, 22, .78);        /* translucent nav bar */
+    --panel: rgba(10, 14, 22, .9);       /* floating callouts */
+    --shadow: 0 30px 90px rgba(0, 0, 0, .55);
+  }
+
+  [data-theme='light'] {
+    color-scheme: light;
+    --bg: #F3F5F8;
+    --bg2: #FFFFFF;
+    --bg3: #FFFFFF;
+    --fg: #0B1220;
+    --fg2: #3A4558;
+    --fg3: #526073;
+    --fg4: #5F6A7D;
+    --line: rgba(11, 18, 32, .08);
+    --line2: rgba(11, 18, 32, .16);
+    --grid: rgba(11, 18, 32, .045);
+    --acc: #067C8E;
+    --accBg: #067C8E;                    /* darker teal fill in light mode */
+    --accInk: #FFFFFF;                   /* white keeps button text legible on it (4.9:1) */
+    --accSoft: rgba(6, 124, 142, .07);
+    --warn: #A35F00;
+    --warnSoft: rgba(214, 138, 0, .10);
+    --ok: #15803D;
+    --nav: rgba(243, 245, 248, .84);
+    --panel: rgba(255, 255, 255, .95);
+    --shadow: 0 30px 80px rgba(11, 18, 32, .10);
+  }
+
+  :root {
+    /* --font-saira and --font-plex-mono are provided by next/font (see layout.jsx) */
+    --sans: var(--font-saira), system-ui, sans-serif;
+    --mono: var(--font-plex-mono), monospace;
+    /* Horizontal page padding */
+    --gutter: clamp(20px, 4vw, 48px);
+  }
+}
+
+/* 2. Base ──────────────────────────────────────────────────────────────── */
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: clip;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    transition: background .3s, color .3s;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--acc); }
+
+  input::placeholder,
+  textarea::placeholder { color: var(--fg4); opacity: 1; }
+
+  ::selection { background: var(--accBg); color: var(--accInk); }
+}
+
+/* Keyboard focus ring. Unlayered and !important so it survives components
+   that reset their controls with `all: unset`. */
+:is(a, button):focus-visible {
+  outline: 2px solid var(--acc) !important;
+  outline-offset: 3px !important;
+}
+
+@keyframes blink { 50% { opacity: .15; } }
+
+/* 3. Shared building blocks ────────────────────────────────────────────── */
+
+@layer components {
+  /* Layout */
+  .container { max-width: 1320px; margin: 0 auto; }
+
+  .stack { display: flex; flex-direction: column; }
+  .gap-16 { gap: 16px; }
+  .gap-28 { gap: 28px; }
+  .gap-40 { gap: 40px; }
+  .gap-48 { gap: 48px; }
+
+  /* Standard content section. --lg (Home, Mission) and --md (Connect, Pricing,
+     About) set the space above it. */
+  .section { padding: 0 var(--gutter); }
+  .section--lg { padding-top: clamp(88px, 11vw, 144px); }
+  .section--md { padding-top: clamp(72px, 9vw, 120px); }
+
+  /* Hero at the top of Mission, Connect, Pricing and About */
+  .page-hero { padding: 156px var(--gutter) 80px; border-bottom: 1px solid var(--line); }
+  .page-hero--short { padding-bottom: 64px; }
+
+  /* Faint blueprint grid */
+  .grid-bg {
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .grid-bg--fine { background-size: 48px 48px; }
+
+  /* Grid of tiles separated by 1px hairlines; set grid-template-columns per use */
+  .hairline-grid { display: grid; gap: 1px; background: var(--line2); border: 1px solid var(--line2); }
+
+  /* Text colours */
+  .accent { color: var(--acc); }
+  .warn { color: var(--warn); }
+  .ok { color: var(--ok); }
+  .muted { color: var(--fg3); }
+  .faint { color: var(--fg4); }
+
+  /* Status dot — blinks unless --steady */
+  .dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--acc); animation: blink 1.2s steps(2) infinite; }
+  .dot--sm { width: 6px; height: 6px; }
+  .dot--lg { width: 8px; height: 8px; }
+  .dot--warn { background: var(--warn); }
+  .dot--ok { background: var(--ok); }
+  .dot--steady { animation: none; }
+
+  /* Small mono label with a blinking dot (see components/ui/Eyebrow) */
+  .eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .14em; color: var(--fg3); }
+
+  /* "[01] TITLE ──── aside" row that opens a section (see components/ui/SectionHeader) */
+  .section-header { display: flex; align-items: center; gap: 16px; font-family: var(--mono); font-size: 12px; letter-spacing: .14em; color: var(--fg3); }
+  .section-header__rule { flex: 1; height: 1px; background: var(--line2); }
+
+  /* Condensed uppercase display type */
+  .display { margin: 0; font-weight: 600; font-stretch: 84%; text-transform: uppercase; }
+  .display--page { font-size: clamp(52px, 7vw, 104px); line-height: .88; }
+  .display--section { font-size: clamp(40px, 5vw, 76px); line-height: .92; text-wrap: balance; }
+  .balance { text-wrap: balance; }
+
+  /* Intro paragraph */
+  .lead { margin: 0; font-size: 18px; line-height: 1.55; color: var(--fg2); text-wrap: pretty; }
+  .lead--lg { font-size: 19px; }
+
+  /* Section heading and intro paragraph side by side */
+  .intro-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 24px 64px; align-items: end; }
+
+  /* Bordered demo window with a title bar */
+  .panel { border: 1px solid var(--line2); background: var(--bg2); box-shadow: var(--shadow); font-family: var(--mono); }
+  .panel-bar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: .12em; color: var(--fg3); }
+
+  /* Form fields (contact form, sign in, sign up) */
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field-label { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--fg3); }
+  .input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line2);
+    border-radius: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .input:focus { border-color: var(--acc); }
+  .input--icon { padding-left: 46px; }    /* room for a leading icon */
+  .input--toggle { padding-right: 50px; } /* room for a show/hide button */
+
+  .form-error { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 14px; color: var(--warn); }
+
+  /* Logos: show the variant that matches the current theme */
+  .only-dark { display: block; }
+  .only-light { display: none; }
+  [data-theme='light'] .only-dark { display: none; }
+  [data-theme='light'] .only-light { display: block; }
+}

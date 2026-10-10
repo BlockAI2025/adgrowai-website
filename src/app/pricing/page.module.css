@@ -1,0 +1,17 @@
+.faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 40px 64px;
+  align-items: start;
+}
+
+.faqIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faqTitle {
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: .92;
+}
