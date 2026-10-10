@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms of Service" dates={['Effective date: March 26, 2026']}>
+    <LegalPage title="Terms of Service" dates={['Effective date: March 26, 2026', 'Last updated: October 10, 2026']}>
       <p>These Terms of Service (&quot;Terms&quot;) govern your access to and use of the AdgrowAI platform operated by AdgrowAI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) at <a href="https://www.adgrowai.com">www.adgrowai.com</a> and <a href="https://app.adgrowai.com">app.adgrowai.com</a>. By using our services, you agree to these Terms.</p>
 
       <h2>1. Description of Service</h2>

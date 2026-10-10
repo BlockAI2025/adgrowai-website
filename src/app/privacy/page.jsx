@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" dates={['Effective date: April 9, 2026', 'Last updated: April 9, 2026']}>
+    <LegalPage title="Privacy Policy" dates={['Effective date: April 9, 2026', 'Last updated: October 10, 2026']}>
       <p>AdgrowAI Limited (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website <a href="https://www.adgrowai.com">www.adgrowai.com</a> and the platform at <a href="https://app.adgrowai.com">app.adgrowai.com</a>. This Privacy Policy describes how we collect, use, and protect your information when you use our services.</p>
 
       <h2>1. Information We Collect</h2>
