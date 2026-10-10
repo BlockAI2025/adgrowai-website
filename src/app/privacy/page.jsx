@@ -10,16 +10,18 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" dates={['Effective date: April 9, 2026', 'Last updated: April 9, 2026']}>
+    <LegalPage title="Privacy Policy" dates={['Effective date: April 9, 2026', 'Last updated: October 10, 2026']}>
       <p>AdgrowAI Limited (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the website <a href="https://www.adgrowai.com">www.adgrowai.com</a> and the platform at <a href="https://app.adgrowai.com">app.adgrowai.com</a>. This Privacy Policy describes how we collect, use, and protect your information when you use our services.</p>
 
       <h2>1. Information We Collect</h2>
       <ul>
         <li><strong>Account Information:</strong> Name, email address, and password when you create an account.</li>
         <li><strong>Business Profile Data:</strong> Business name, industry, website URL, target audience, advertising budget, and campaign objectives provided during onboarding.</li>
+        <li><strong>Waitlist Information:</strong> When you join the waitlist on our website: your name, email address, business name and location, and optionally your website and a description of your business. It is sent to us through Formspree and used to contact you about access to AdgrowAI.</li>
         <li><strong>Advertising Platform Data:</strong> When you connect your Google Ads or Meta Ads accounts via OAuth, we access campaign performance data (impressions, clicks, conversions, cost, keyword metrics). We do NOT store your Google or Meta login credentials.</li>
         <li><strong>Usage Data:</strong> Pages visited, features used, actions taken, timestamps, device and browser information.</li>
-        <li><strong>Cookies:</strong> Essential httpOnly session cookies for authentication. We may use analytics cookies to improve our services.</li>
+        <li><strong>Cookies:</strong> When you sign in to app.adgrowai.com, a sign-in token is stored in your browser&apos;s local storage and sent with each request. It expires after a limited time and is removed when you sign out. Our server may also set an httpOnly cookie containing the same token.</li>
+        <li><strong>Advertising cookies on our website:</strong> www.adgrowai.com uses the Google Ads tag, which sets Google advertising cookies so we can measure our ads, and tells Google Ads when someone joins our waitlist. Google&apos;s use of this data is covered by its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>; you can manage ad personalisation in <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google&apos;s ad settings</a> or block these cookies in your browser.</li>
         <li><strong>LLM Processing Data:</strong> When you use our AI features (Strategy Coach, keyword suggestions, decision recommendations), campaign data, business profile details, and performance metrics are sent to OpenAI&apos;s API for processing. OpenAI does not use API data to train their models.</li>
       </ul>
 
@@ -55,7 +57,7 @@ export default function PrivacyPage() {
           <li>We do <strong>not</strong> use Meta platform data for advertising or marketing to end users.</li>
           <li>We do <strong>not</strong> use Meta platform data to build user profiles or identify individuals.</li>
           <li>You may disconnect your Meta Ads account at any time through your account settings, which will stop all further data access.</li>
-          <li>Upon account deletion or disconnection, Meta platform data is deleted from our systems within 30 days.</li>
+          <li>You can ask us to delete your Meta platform data at any time using our <a href="/delete-data">data deletion form</a>; we complete deletion requests within 30 days.</li>
         </ul>
         <p className={styles.spaced}>Our use of information received from Meta Platforms adheres to the <a href="https://developers.facebook.com/terms/" target="_blank" rel="noopener noreferrer">Meta Platform Terms</a> and <a href="https://developers.facebook.com/devpolicy/" target="_blank" rel="noopener noreferrer">Developer Policies</a>.</p>
       </div>
@@ -66,8 +68,8 @@ export default function PrivacyPage() {
       <p>NZ Company Number: 9418222</p>
       <p>NZBN: 9429053564504</p>
       <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-      <p>Email: <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a></p>
-      <p className={styles.spaced}>For any questions about how your data is handled, or to exercise your data rights, contact us at <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>.</p>
+      <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
+      <p className={styles.spaced}>For any questions about how your data is handled, or to exercise your data rights, contact us at <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>.</p>
 
       <h2>6. Legal Basis for Processing (GDPR)</h2>
       <p>For users in the European Economic Area (EEA) and United Kingdom, we process your personal data on the following legal bases:</p>
@@ -91,22 +93,22 @@ export default function PrivacyPage() {
       <p>We implement industry-standard security measures to protect your data:</p>
       <ul>
         <li>Encrypted connections (HTTPS/TLS).</li>
-        <li>HttpOnly authentication cookies.</li>
+        <li>Sign-in tokens that expire after a limited time and are removed when you sign out.</li>
         <li>Input validation and rate limiting.</li>
         <li>Role-based access controls.</li>
       </ul>
       <p className={styles.spaced}>No method of transmission or storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
 
       <h2>9. Data Retention</h2>
-      <p>We retain your data for the following periods:</p>
+      <p>We retain your data as follows:</p>
       <ul>
-        <li><strong>Account data (name, email, business profile):</strong> Retained while your account is active, and for 90 days after account deletion to allow for recovery.</li>
-        <li><strong>Advertising platform data (Google Ads, Meta Ads metrics):</strong> Retained while the connection is active. Deleted within 30 days of account disconnection or deletion.</li>
-        <li><strong>Execution plans and optimization history:</strong> Retained for 12 months to enable learning and performance tracking, then anonymized or deleted.</li>
-        <li><strong>Support communications:</strong> Retained for 24 months for quality and training purposes.</li>
+        <li><strong>Account data (name, email, business profile):</strong> Retained while your account exists. If you delete your account in the app, we deactivate it and delete your business profile straight away; the rest of your account data is deleted on request.</li>
+        <li><strong>Advertising platform data (Google Ads, Meta Ads metrics):</strong> Retained while your account exists. Disconnecting an advertising account stops further access to it; data already collected is deleted on request.</li>
+        <li><strong>Execution plans and optimization history:</strong> Retained while your account exists, to track results and improve recommendations; deleted on request.</li>
+        <li><strong>Support communications:</strong> Retained for as long as we need them to help you; deleted on request.</li>
         <li><strong>Legal and compliance records:</strong> Retained as required by applicable law, typically up to 7 years.</li>
       </ul>
-      <p className={styles.spaced}>You may request immediate deletion of your data at any time by emailing <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
+      <p className={styles.spaced}>You may request deletion of your data at any time using our <a href="/delete-data">data deletion form</a> or by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. We complete deletion requests within 30 days. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
 
       <h2>10. International Data Transfers</h2>
       <p>AdgrowAI Limited is based in New Zealand. Our service providers may be located in the United States, European Union, and other jurisdictions. This means your personal data may be transferred to, stored in, and processed in countries outside your country of residence.</p>
@@ -116,7 +118,7 @@ export default function PrivacyPage() {
         <li>Data processing agreements with all third-party providers.</li>
         <li>New Zealand&apos;s privacy laws, which provide protections comparable to GDPR principles.</li>
       </ul>
-      <p className={styles.spaced}>Our primary service providers include: OpenAI (United States), Railway (United States), Vercel (United States), MongoDB Atlas (United States), Resend (United States), Google (United States), and Meta (United States).</p>
+      <p className={styles.spaced}>Our primary service providers include: OpenAI (United States), Railway (United States), Vercel (United States), MongoDB Atlas (United States), Resend (United States), Formspree (United States), Cloudflare (United States), Google (United States), and Meta (United States).</p>
 
       <h2>11. Your Rights</h2>
       <p>You have the right to:</p>
@@ -128,7 +130,7 @@ export default function PrivacyPage() {
         <li>Request portability of your data in a machine-readable format.</li>
         <li>Withdraw consent where processing is based on consent.</li>
       </ul>
-      <p className={styles.spaced}>To exercise any of these rights, contact us at <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a>.</p>
+      <p className={styles.spaced}>To exercise any of these rights, contact us at <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>.</p>
       <p className={styles.spaced}>For users in California, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what categories of personal information we collect, the right to request deletion, and the right to opt out of the sale of personal information. AdgrowAI Limited does not sell personal information as defined by the CCPA.</p>
       <p className={styles.spaced}>For users in the EEA and UK, you have the right to lodge a complaint with your local data protection authority if you believe we have not handled your data appropriately.</p>
 
@@ -138,6 +140,8 @@ export default function PrivacyPage() {
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Ads</a></li>
         <li><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta Ads</a></li>
         <li><a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer">OpenAI</a></li>
+        <li><a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree</a>, which receives the contact, waitlist and data deletion forms on this website and emails them to us.</li>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare</a>, which provides DNS, security and content delivery for adgrowai.com and processes visitors&apos; IP addresses and requests to do so.</li>
       </ul>
       <p className={styles.spaced}>We encourage you to review the privacy policies of these services.</p>
 
@@ -152,7 +156,7 @@ export default function PrivacyPage() {
       <p className={styles.spaced}><strong>AdgrowAI Limited</strong></p>
       <p>NZ Company No. 9418222 | NZBN 9429053564504</p>
       <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-      <p>Email: <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a></p>
+      <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
       <p>Website: <a href="https://www.adgrowai.com">www.adgrowai.com</a></p>
 
       <h2>16. Governing Law</h2>

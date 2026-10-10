@@ -3,9 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { NAV_LINKS, OTHER_LINKS } from '@/lib/site';
+import { NAV_LINKS, OTHER_LINKS, APP_LOGIN_URL } from '@/lib/site';
 import { Wordmark } from './Logo';
 import ThemeToggle from './ThemeToggle';
+import WaitlistLink from './WaitlistLink';
 import styles from './Nav.module.css';
 
 export default function Nav() {
@@ -88,8 +89,8 @@ export default function Nav() {
 
         <div className={styles.actions}>
           <ThemeToggle />
-          <Link href="/signin" className={styles.signIn}>SIGN IN</Link>
-          <Link href="/signup" className={styles.signUp}>SIGN UP</Link>
+          <a href={APP_LOGIN_URL} className={styles.signIn}>SIGN IN</a>
+          <WaitlistLink className={styles.signUp}>SIGN UP</WaitlistLink>
         </div>
       </div>
       <div className={styles.progressTrack}>

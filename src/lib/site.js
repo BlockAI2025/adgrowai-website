@@ -20,13 +20,21 @@ export const OTHER_LINKS = [
 
 export const CONTACT_EMAIL = 'admin@adgrowai.com';
 
+/**
+ * Sign in happens in the app (existing customers). Sign up goes to the waitlist.
+ * /signin, /login, /signup and /register redirect accordingly (next.config.mjs);
+ * the forms in components/auth aren't connected to the backend.
+ */
+export const APP_LOGIN_URL = 'https://app.adgrowai.com/login';
+
 /** Formspree endpoints that receive form submissions. */
 export const FORM_ENDPOINTS = {
   // Same Formspree form the current site's waitlist uses.
   waitlist: 'https://formspree.io/f/maqddere',
-  // TODO: create a Formspree form for contact messages and add its URL here.
-  // Until then the contact form shows an error asking people to email us.
-  contact: null,
+  // Same Formspree form the current site's contact page uses.
+  contact: 'https://formspree.io/f/xoejveqn',
+  // Data deletion requests (/delete-data); same form the current site uses.
+  deletion: 'https://formspree.io/f/mwlvplka',
 };
 
 /** Google Ads tag carried over from the current site; records waitlist sign-ups. Set to null to disable. */

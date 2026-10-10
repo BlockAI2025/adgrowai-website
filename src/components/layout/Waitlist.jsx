@@ -39,7 +39,12 @@ export default function Waitlist() {
           <div className={styles.joined}>✓ You&apos;re on the list. We&apos;ll be in touch.</div>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <input type="email" name="email" required placeholder="you@business.com" aria-label="Email address" className={styles.input} />
+            <input type="text" name="name" required autoComplete="name" placeholder="Your name" aria-label="Contact name" className={styles.input} />
+            <input type="email" name="email" required autoComplete="email" placeholder="you@business.com" aria-label="Email address" className={styles.input} />
+            <input type="text" name="business_name" required autoComplete="organization" placeholder="Business name" aria-label="Business name" className={styles.input} />
+            <input type="text" name="location" required placeholder="City or region" aria-label="Business location" className={styles.input} />
+            <input type="url" name="website" placeholder="https://yourbusiness.com (optional)" aria-label="Website (optional)" className={`${styles.input} ${styles.full}`} />
+            <textarea name="business_description" rows={3} placeholder="What does your business do? (optional)" aria-label="Business description (optional)" className={`${styles.input} ${styles.full}`} />
             <button type="submit" disabled={status === 'sending'} className={styles.button}>JOIN WAITLIST →</button>
             {status === 'error' && (
               <p role="alert" className={`form-error ${styles.error}`}>

@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalPage title="Terms of Service" dates={['Effective date: March 26, 2026']}>
+    <LegalPage title="Terms of Service" dates={['Effective date: March 26, 2026', 'Last updated: October 10, 2026']}>
       <p>These Terms of Service (&quot;Terms&quot;) govern your access to and use of the AdgrowAI platform operated by AdgrowAI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) at <a href="https://www.adgrowai.com">www.adgrowai.com</a> and <a href="https://app.adgrowai.com">app.adgrowai.com</a>. By using our services, you agree to these Terms.</p>
 
       <h2>1. Description of Service</h2>
@@ -41,7 +41,7 @@ export default function TermsPage() {
       <h2>4. Subscription and Payment</h2>
       <ul>
         <li>AdgrowAI offers paid subscription plans.</li>
-        <li>Subscriptions are billed on a recurring basis unless cancelled.</li>
+        <li>Fees and billing terms are agreed when you subscribe.</li>
         <li>We reserve the right to modify pricing with reasonable notice.</li>
       </ul>
 
@@ -93,7 +93,7 @@ export default function TermsPage() {
       <p className={styles.spaced}><strong>AdgrowAI Limited</strong></p>
       <p>NZ Company No. 9418222 | NZBN 9429053564504</p>
       <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
-      <p>Email: <a href="mailto:aman@adgrowai.com">aman@adgrowai.com</a></p>
+      <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
       <p>Website: <a href="https://www.adgrowai.com">www.adgrowai.com</a></p>
     </LegalPage>
   );
