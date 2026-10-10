@@ -92,7 +92,7 @@ export default function TermsPage() {
       <p>If you have questions about these Terms, contact us at:</p>
       <p className={styles.spaced}><strong>AdgrowAI Limited</strong></p>
       <p>NZ Company No. 9418222 | NZBN 9429053564504</p>
-      <p>Registered office: 117 Wiseley Road, West Harbour, Auckland 0618, New Zealand</p>
+      <p>Registered office: 641 Pahi Rd, Pahi 0571, New Zealand</p>
       <p>Email: <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a></p>
       <p>Website: <a href="https://www.adgrowai.com">www.adgrowai.com</a></p>
     </LegalPage>
