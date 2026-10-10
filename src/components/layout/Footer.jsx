@@ -35,10 +35,6 @@ export default function Footer() {
         </div>
         <div className={styles.bottom}>
           <span>© {YEAR} ADGROW</span>
-          <span className={styles.status}>
-            <span className="dot dot--sm" />
-            ALL SYSTEMS NOMINAL
-          </span>
         </div>
         <div className={styles.wordmark} aria-hidden="true">ADGROW</div>
       </div>
