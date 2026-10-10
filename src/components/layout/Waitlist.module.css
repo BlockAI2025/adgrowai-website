@@ -100,6 +100,12 @@
   border-color: var(--acc);
 }
 
+/* Fields that take a whole row (website, business description). */
+.full {
+  flex-basis: 100%;
+  resize: vertical;
+}
+
 .button {
   all: unset;
   cursor: pointer;
