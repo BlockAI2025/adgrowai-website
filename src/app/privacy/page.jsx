@@ -106,7 +106,7 @@ export default function PrivacyPage() {
         <li><strong>Support communications:</strong> Retained for 24 months for quality and training purposes.</li>
         <li><strong>Legal and compliance records:</strong> Retained as required by applicable law, typically up to 7 years.</li>
       </ul>
-      <p className={styles.spaced}>You may request immediate deletion of your data at any time by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
+      <p className={styles.spaced}>You may request immediate deletion of your data at any time using our <a href="/delete-data">data deletion form</a> or by emailing <a href="mailto:admin@adgrowai.com">admin@adgrowai.com</a>. Some data may be retained where required by law or for legitimate business purposes such as fraud prevention.</p>
 
       <h2>10. International Data Transfers</h2>
       <p>AdgrowAI Limited is based in New Zealand. Our service providers may be located in the United States, European Union, and other jurisdictions. This means your personal data may be transferred to, stored in, and processed in countries outside your country of residence.</p>
