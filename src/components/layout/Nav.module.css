@@ -1,0 +1,163 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--nav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 68px;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logo {
+  flex: none;
+  display: flex;
+}
+
+.logoImage {
+  height: 24px;
+  width: auto;
+}
+
+/* Centre links */
+
+.links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px clamp(14px, 2vw, 32px);
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.link {
+  color: var(--fg3);
+}
+
+.link[aria-current='page'] {
+  color: var(--fg);
+}
+
+/* "OTHER" dropdown */
+
+.menu {
+  position: relative;
+  display: flex;
+}
+
+.menuButton {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--fg3);
+}
+
+.menuButton[data-current='true'] {
+  color: var(--fg);
+}
+
+.chevron {
+  width: 9px;
+  height: 6px;
+  transition: transform .2s;
+}
+
+.chevron path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.menuButton[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  box-shadow: var(--shadow);
+}
+
+.menuItem {
+  padding: 11px 12px;
+  color: var(--fg2);
+}
+
+.menuItem:hover {
+  background: var(--bg3);
+  color: var(--fg);
+}
+
+/* Theme toggle and auth buttons */
+
+.actions {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signIn,
+.signUp {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.signIn {
+  color: var(--fg);
+  padding: 9px 14px;
+  border: 1px solid var(--line2);
+}
+
+.signIn:hover {
+  border-color: var(--fg3);
+}
+
+.signUp {
+  color: var(--accInk);
+  background: var(--accBg);
+  padding: 10px 16px;
+}
+
+.signUp:hover {
+  filter: brightness(1.1);
+}
+
+/* Scroll progress */
+
+.progressTrack {
+  height: 1px;
+}
+
+.progress {
+  height: 1px;
+  background: var(--acc);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}

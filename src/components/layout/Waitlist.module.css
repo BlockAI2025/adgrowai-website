@@ -1,0 +1,128 @@
+.section {
+  padding: clamp(88px, 11vw, 144px) var(--gutter);
+}
+
+.box {
+  position: relative;
+  border: 1px solid var(--line2);
+  overflow: hidden;
+  padding: clamp(48px, 7vw, 104px) clamp(24px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  background-color: var(--bg2);
+}
+
+/* Concentric "radar" rings behind the content */
+.ring {
+  position: absolute;
+  top: 50%;
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid var(--line2);
+  pointer-events: none;
+}
+
+.ringOuter {
+  right: -12%;
+  width: min(68vw, 860px);
+}
+
+.ringMiddle {
+  right: -3%;
+  width: min(46vw, 580px);
+}
+
+.ringInner {
+  right: 6%;
+  width: min(24vw, 310px);
+  border-color: var(--acc);
+  opacity: .55;
+}
+
+/* Content sits above the rings */
+.layer,
+.title,
+.text,
+.joined,
+.form {
+  position: relative;
+}
+
+.title {
+  font-size: clamp(48px, 6.6vw, 104px);
+  line-height: .88;
+  max-width: 12ch;
+  text-wrap: balance;
+}
+
+.text {
+  margin: 0;
+  max-width: 44ch;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--fg2);
+}
+
+.joined {
+  width: min(520px, 100%);
+  padding: 17px 18px;
+  border: 1px solid var(--acc);
+  background: var(--bg2);
+  color: var(--acc);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.form {
+  width: min(520px, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 200px;
+  background: var(--bg3);
+  border: 1px solid var(--line2);
+  outline: 0;
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 16px;
+  padding: 16px;
+  transition: border-color .2s;
+}
+
+.input:focus {
+  border-color: var(--acc);
+}
+
+/* Fields that take a whole row (website, business description). */
+.full {
+  flex-basis: 100%;
+  resize: vertical;
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+  background: var(--accBg);
+  color: var(--accInk);
+  padding: 16px 22px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+.error {
+  flex-basis: 100%;
+}

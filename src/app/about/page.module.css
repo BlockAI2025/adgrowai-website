@@ -1,0 +1,450 @@
+/* Hero */
+
+.title {
+  max-width: 16ch;
+}
+
+.heroText {
+  max-width: 62ch;
+}
+
+/* Blog and Contact are linked to from the nav; leave room for the fixed bar */
+.anchor {
+  scroll-margin-top: 80px;
+}
+
+/* [01] What we believe */
+
+.beliefs {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.belief {
+  background: var(--bg);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 240px;
+}
+
+.beliefIndex {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.beliefTitle {
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.beliefText {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--fg3);
+}
+
+/* Founder quote */
+
+.quote {
+  margin: 40px 0 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 36px);
+  align-items: start;
+}
+
+.quoteMark {
+  font-size: clamp(88px, 10vw, 150px);
+  font-weight: 600;
+  line-height: .72;
+  color: var(--acc);
+}
+
+.quoteMarkClose {
+  display: inline-block;
+  vertical-align: top;
+  height: .4em;
+  margin-left: .12em;
+}
+
+.quoteBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.quoteText {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 34ch;
+  text-wrap: pretty;
+  color: var(--fg);
+}
+
+.quoteCaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
+
+.quoteRule {
+  width: 28px;
+  height: 1px;
+  background: var(--acc);
+}
+
+.quoteName {
+  color: var(--fg);
+}
+
+/* [02] Our story */
+
+.story {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 60ch;
+}
+
+.storyLead {
+  margin: 0;
+  font-size: clamp(21px, 1.9vw, 26px);
+  line-height: 1.4;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+.storyBody {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+/* Agency vs Adgrow cost comparison */
+
+.cost {
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.costHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.costRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.costLabel {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
+
+.costPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.costAmount {
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 600;
+  font-stretch: 84%;
+  line-height: .9;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg2);
+}
+
+.costAmountHighlight {
+  color: var(--acc);
+}
+
+.costPer {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--fg3);
+}
+
+.costBar {
+  height: 28px;
+  border: 1px solid var(--line2);
+  background: var(--bg);
+}
+
+.costFill {
+  height: 100%;
+  min-width: 6px;
+  background: repeating-linear-gradient(135deg, var(--fg4) 0 2px, transparent 2px 7px);
+}
+
+.costFillHighlight {
+  background: var(--acc);
+}
+
+.costFoot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--fg3);
+}
+
+/* Line from the story down to the vision */
+.connector {
+  display: flex;
+  justify-content: center;
+}
+
+.connector span {
+  width: 1px;
+  height: clamp(48px, 6vw, 80px);
+  background: linear-gradient(var(--line2), var(--acc));
+}
+
+.vision {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: clamp(24px, 5vw, 72px);
+  align-items: start;
+  padding: clamp(32px, 4vw, 48px) 0 0;
+  border-top: 1px solid var(--line2);
+}
+
+.visionHead {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.visionLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--acc);
+}
+
+.visionTitle {
+  font-size: clamp(44px, 5.4vw, 80px);
+  line-height: .9;
+}
+
+.visionText {
+  margin: 0;
+  max-width: 56ch;
+  font-size: clamp(19px, 1.6vw, 22px);
+  line-height: 1.55;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+/* [03] Our values */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 16px;
+}
+
+.value {
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: clamp(28px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.valueIcon {
+  align-self: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 20px;
+  border: 1.5px solid var(--acc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--acc);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.valueTitle {
+  font-size: clamp(28px, 2.6vw, 36px);
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  line-height: .95;
+}
+
+.valueText {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+/* [04] Blog */
+
+.posts {
+  display: grid;
+  /* auto-fill keeps a lone post card at column width rather than full width */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line2);
+  color: var(--fg);
+}
+
+.post:hover {
+  border-color: var(--acc);
+}
+
+.postBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.postMeta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+.postTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.postRead {
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--acc);
+}
+
+/* [05] Contact */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: flex-start;
+}
+
+.details {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--line2);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line2);
+}
+
+.detailLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.email {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.email:hover {
+  color: var(--acc);
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--fg2);
+}
+
+.company {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.companyNumbers {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--fg3);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--acc);
+}

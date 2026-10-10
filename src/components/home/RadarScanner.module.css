@@ -1,0 +1,144 @@
+.panel {
+  justify-self: end;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  box-shadow: var(--shadow);
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 1 / 0.92;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Accent corner brackets */
+.corner {
+  position: absolute;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+  border-top: 1px solid var(--acc);
+}
+
+.cornerLeft {
+  left: -1px;
+  border-left: 1px solid var(--acc);
+}
+
+.cornerRight {
+  right: -1px;
+  border-right: 1px solid var(--acc);
+}
+
+.hud {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+.hudTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hudStrong {
+  color: var(--fg);
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--acc);
+}
+
+/* "TARGET LOCK" readout */
+.lock {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  width: min(240px, calc(100% - 28px));
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 11px 13px;
+  background: var(--panel);
+  border: 1px solid var(--line2);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.lockHead {
+  display: flex;
+  justify-content: space-between;
+  color: var(--warn);
+  letter-spacing: .12em;
+  font-size: 10px;
+}
+
+.lockQuery {
+  color: var(--fg);
+}
+
+.lockCampaign {
+  color: var(--fg3);
+}
+
+.lockFoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid var(--line2);
+  padding-top: 5px;
+}
+
+/* Stats row */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+}
+
+.stat {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat + .stat {
+  border-left: 1px solid var(--line);
+}
+
+.statLabel {
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.statValue {
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}

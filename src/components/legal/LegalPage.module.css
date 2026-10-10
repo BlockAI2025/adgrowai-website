@@ -1,0 +1,71 @@
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+
+/* The document text */
+
+.document {
+  max-width: 800px;
+  padding-bottom: clamp(72px, 9vw, 120px);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--fg2);
+}
+
+.document p {
+  margin: 0;
+}
+
+.document h2 {
+  margin: 48px 0 16px;
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: 88%;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.document ul {
+  margin: 12px 0 0;
+  padding-left: 24px;
+}
+
+.document li + li {
+  margin-top: 6px;
+}
+
+.document li::marker {
+  color: var(--acc);
+}
+
+.document strong {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.document a {
+  color: var(--acc);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A paragraph with space above it */
+.document .spaced {
+  margin-top: 12px;
+}
+
+/* Highlighted block (e.g. how we use Google Ads data) */
+.callout {
+  margin: 16px 0;
+  padding: 20px 24px;
+  border-left: 3px solid var(--acc);
+  background: var(--accSoft);
+}

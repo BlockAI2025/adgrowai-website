@@ -1,0 +1,239 @@
+/* Simulation panel */
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+.barTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg);
+}
+
+.barStatus {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.clock {
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The chart scrolls sideways on narrow screens rather than squashing */
+.scroller {
+  overflow-x: auto;
+}
+
+.stage {
+  position: relative;
+  min-width: 820px;
+  height: clamp(380px, 36vw, 460px);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Callouts */
+
+.callout {
+  position: absolute;
+  top: 16px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 12px;
+  background: var(--panel);
+  border: 1px solid var(--warn);
+  transition: opacity .4s;
+  pointer-events: none;
+}
+
+.callout[data-tone='accent'] {
+  border-color: var(--acc);
+}
+
+.first {
+  left: 44px;
+}
+
+.second {
+  left: max(258px, calc(44px + (100% - 64px) * .2));
+}
+
+.third {
+  left: max(472px, calc(44px + (100% - 64px) * .4));
+}
+
+.middle {
+  top: 47%;
+  left: calc(44px + (100% - 64px) * .5);
+  width: min(300px, 34%);
+}
+
+.calloutTitle {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--warn);
+}
+
+.callout[data-tone='accent'] .calloutTitle {
+  color: var(--acc);
+}
+
+.calloutText {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--fg2);
+}
+
+/* Legend */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  color: var(--fg3);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  flex: none;
+  width: 10px;
+  height: 10px;
+}
+
+.demand {
+  width: 20px;
+  height: auto;
+  border-top: 2px dashed var(--fg);
+}
+
+.ads {
+  background: var(--acc);
+  opacity: .45;
+}
+
+.waste {
+  background: var(--warn);
+}
+
+.adsOff {
+  background: repeating-linear-gradient(135deg, var(--warn) 0 1.5px, transparent 1.5px 4px);
+}
+
+.call {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--acc);
+}
+
+.scan {
+  width: 2px;
+  height: 12px;
+  background: var(--acc);
+}
+
+.opportunity {
+  width: 20px;
+  height: auto;
+  border-top: 2px dotted var(--acc);
+}
+
+/* Leak cards */
+
+.leaks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.leaksHint {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg4);
+}
+
+.leakGrid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.leak {
+  all: unset;
+  cursor: pointer;
+  box-sizing: border-box;
+  background: var(--bg);
+  box-shadow: inset 0 3px 0 transparent;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: background .2s, box-shadow .2s;
+}
+
+.leak[aria-pressed='true'] {
+  background: var(--bg2);
+  box-shadow: inset 0 3px 0 var(--warn);
+}
+
+.leakHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+}
+
+.leakStat {
+  color: var(--fg3);
+}
+
+.leakTitle {
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.leakText {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--fg3);
+  text-wrap: pretty;
+}

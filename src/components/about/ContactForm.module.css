@@ -1,0 +1,114 @@
+.box {
+  flex: 1.4 1 420px;
+  min-width: 0;
+  border: 1px solid var(--line2);
+  background: var(--bg2);
+  padding: clamp(24px, 3vw, 40px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.half {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.selectWrap {
+  position: relative;
+  display: flex;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 11px;
+  height: 7px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--fg3);
+}
+
+.chevron path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.submit {
+  all: unset;
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 16px 26px;
+  background: var(--accBg);
+  color: var(--accInk);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+
+.submit:hover {
+  filter: brightness(1.1);
+}
+
+.submit:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+/* Sent confirmation */
+
+.sent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.sentIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--ok);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.sentTitle {
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: 85%;
+  text-transform: uppercase;
+}
+
+.sentText {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--fg2);
+}

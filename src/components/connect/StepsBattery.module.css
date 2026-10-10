@@ -1,0 +1,99 @@
+.battery {
+  display: flex;
+  align-items: center;
+  gap: 14px 20px;
+  flex-wrap: wrap;
+  max-width: 860px;
+  padding-top: 8px;
+}
+
+.body {
+  flex: 1;
+  min-width: min(100%, 300px);
+  display: flex;
+  align-items: center;
+}
+
+.shell {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line2);
+  background: var(--bg);
+  transition: border-color .4s;
+}
+
+.cell {
+  position: relative;
+  height: 72px;
+  background: var(--bg2);
+  overflow: hidden;
+}
+
+.cellContent {
+  position: absolute;
+  inset: 0;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cellNumber {
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: 84%;
+  line-height: 1;
+  color: var(--fg2);
+}
+
+.cellLabel {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .12em;
+  color: var(--fg3);
+}
+
+/* Green copy of the cell, revealed left to right as it charges */
+.cellFill {
+  background: var(--ok);
+  clip-path: inset(0 100% 0 0);
+}
+
+.cellFill .cellNumber,
+.cellFill .cellLabel {
+  color: var(--bg);
+}
+
+.cellFill .cellLabel {
+  font-weight: 600;
+}
+
+.cellEdge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: var(--fg);
+  opacity: 0;
+}
+
+/* Battery terminal */
+.nub {
+  flex: none;
+  width: 7px;
+  height: 28px;
+  background: var(--line2);
+  transition: background .3s;
+}
+
+.status {
+  min-width: 17ch;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  color: var(--fg3);
+}
