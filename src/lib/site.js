@@ -21,11 +21,11 @@ export const OTHER_LINKS = [
 export const CONTACT_EMAIL = 'admin@adgrowai.com';
 
 /**
- * Sign in and sign up happen in the app. /signin and /signup redirect there too
- * (next.config.mjs); their forms in components/auth aren't connected to the backend.
+ * Sign in happens in the app (existing customers). Sign up goes to the waitlist.
+ * /signin, /login, /signup and /register redirect accordingly (next.config.mjs);
+ * the forms in components/auth aren't connected to the backend.
  */
 export const APP_LOGIN_URL = 'https://app.adgrowai.com/login';
-export const APP_REGISTER_URL = 'https://app.adgrowai.com/register';
 
 /** Formspree endpoints that receive form submissions. */
 export const FORM_ENDPOINTS = {
