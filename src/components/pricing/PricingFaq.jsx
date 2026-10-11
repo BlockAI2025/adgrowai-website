@@ -1,6 +1,3 @@
-'use client';
-
-import { useId, useState } from 'react';
 import styles from './PricingFaq.module.css';
 
 const FAQS = [
@@ -13,8 +10,8 @@ const FAQS = [
     answer: 'No. Every change to your account requires your explicit approval before it is applied.',
   },
   {
-    question: 'What if my spend goes over my plan?',
-    answer: 'Adgrow keeps watching and lets you know. You can move up a plan whenever you like.',
+    question: 'Can Adgrow spend more than I am willing to allocate?',
+    answer: 'No, it may recommend increasing budget on certain campaigns if it believes that would be beneficial, but it will not increase expenditure without your explicit approval.',
   },
   {
     question: 'Can I cancel at any time?',
@@ -22,35 +19,17 @@ const FAQS = [
   },
 ];
 
-/** Accordion of pricing questions; one answer open at a time. */
+/** Grid of pricing questions, each answered in its own card. */
 export default function PricingFaq() {
-  const [openIndex, setOpenIndex] = useState(0);
-  const id = useId();
-
   return (
-    <div className={styles.faq}>
-      {FAQS.map(({ question, answer }, i) => {
-        const open = openIndex === i;
-        return (
-          <div key={question} className={styles.item}>
-            <button
-              type="button"
-              className={styles.question}
-              aria-expanded={open}
-              aria-controls={`${id}-${i}`}
-              onClick={() => setOpenIndex(open ? -1 : i)}
-            >
-              <span>{question}</span>
-              <span className={styles.sign}>{open ? '−' : '+'}</span>
-            </button>
-            {open && (
-              <p id={`${id}-${i}`} className={styles.answer}>
-                {answer}
-              </p>
-            )}
-          </div>
-        );
-      })}
+    <div data-reveal="1" className={styles.faq}>
+      {FAQS.map(({ question, answer }, i) => (
+        <div key={question} className={styles.card}>
+          <span className={styles.number}>Q.{String(i + 1).padStart(2, '0')}</span>
+          <h3 className={styles.question}>{question}</h3>
+          <p className={styles.answer}>{answer}</p>
+        </div>
+      ))}
     </div>
   );
 }

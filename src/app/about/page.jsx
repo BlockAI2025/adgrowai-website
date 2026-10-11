@@ -21,18 +21,21 @@ const AGENCY_MONTHLY_COST = 5000;
 const VALUES = [
   {
     icon: 'bi-eye',
+    iconFill: 'bi-eye-fill',
     title: 'Transparent and Explainable',
     text: 'We show you exactly what the AI is thinking and why. No black boxes, no magic claims.',
   },
   {
     icon: 'bi-hand-index-thumb',
+    iconFill: 'bi-hand-index-thumb-fill',
     title: 'Control in your fingertips',
     text: 'The AI advises based on metrics, information and trends, you ultimately hold control - no decisions without your explicit approval.',
   },
   {
     icon: 'bi-shield-check',
+    iconFill: 'bi-shield-fill',
     title: 'Safety Before Speed',
-    text: 'We prioritize keeping your campaigns safe over making aggressive changes. This is why we confidence scores, to allow the software time to collect and analyse the right sort of data and apply it with confidence you can trust.',
+    text: 'We prioritize keeping your campaigns safe over making aggressive changes. This is why we have confidence scores - to analyse the right data and apply it with confidence you can rely on.',
   },
 ];
 
@@ -154,7 +157,14 @@ export default function AboutPage() {
             {VALUES.map((value, i) => (
               <div key={value.title} data-reveal={i} className={styles.value}>
                 <span aria-hidden="true" className={styles.valueIcon}>
-                  <i className={`bi ${value.icon}`} />
+                  <span className={`${styles.valueCorner} ${styles.valueCornerTopLeft}`} />
+                  <span className={`${styles.valueCorner} ${styles.valueCornerTopRight}`} />
+                  <span className={`${styles.valueCorner} ${styles.valueCornerBottomLeft}`} />
+                  <span className={`${styles.valueCorner} ${styles.valueCornerBottomRight}`} />
+                  <span className={styles.valueGlyph}>
+                    <i className={`bi ${value.iconFill} ${styles.valueGlyphMask}`} />
+                    <i className={`bi ${value.icon}`} />
+                  </span>
                 </span>
                 <span className={styles.valueTitle}>{value.title}</span>
                 <span className={styles.valueText}>{value.text}</span>

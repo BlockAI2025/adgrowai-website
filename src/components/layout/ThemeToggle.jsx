@@ -11,8 +11,13 @@ function subscribe(onChange) {
   return () => observer.disconnect();
 }
 
+/** The current theme ('dark' or 'light'), kept up to date. */
+export function useTheme() {
+  return useSyncExternalStore(subscribe, getTheme, () => DEFAULT_THEME);
+}
+
 export default function ThemeToggle() {
-  const theme = useSyncExternalStore(subscribe, getTheme, () => DEFAULT_THEME);
+  const theme = useTheme();
 
   return (
     <div className={styles.toggle}>

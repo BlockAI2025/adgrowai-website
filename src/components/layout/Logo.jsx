@@ -15,7 +15,7 @@ export function Wordmark({ className = '' }) {
   );
 }
 
-/** Icon-only "A" mark (sign-in/up cards and the Connect animation): white on dark, black on light. */
+/** Icon-only "A" mark (the Connect animation): white on dark, black on light. */
 export function Mark({ className = '' }) {
   return (
     <>
