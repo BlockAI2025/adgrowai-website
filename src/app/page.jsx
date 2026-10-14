@@ -50,7 +50,7 @@ export default function HomePage() {
             </p>
             <div className={styles.heroActions}>
               <Link href="/mission" className={styles.heroButton}>SEE HOW IT WORKS</Link>
-              <Link href="/connect" className={`${styles.heroButton} ${styles.heroButtonPrimary}`}>CONNECT →</Link>
+              <Link href="/connect" className={`${styles.heroButton} ${styles.heroButtonPrimary}`}>CONNECT</Link>
             </div>
             <div className={styles.heroChecks}>
               <span>[✓] YOU APPROVE EVERY CHANGE</span>

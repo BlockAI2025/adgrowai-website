@@ -13,10 +13,6 @@ const FAQS = [
     answer: 'No. Every change to your account requires your explicit approval before it is applied.',
   },
   {
-    question: 'What if my spend goes over my plan?',
-    answer: 'Adgrow keeps watching and lets you know. You can move up a plan whenever you like.',
-  },
-  {
     question: 'Can I cancel at any time?',
     answer: 'Yes. Monthly plans can be cancelled at any time. Annual plans run to the end of the billing year.',
   },
