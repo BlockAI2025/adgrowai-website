@@ -13,6 +13,10 @@ const FAQS = [
     answer: 'No. Every change to your account requires your explicit approval before it is applied.',
   },
   {
+    question: 'Can Adgrow spend more than I am willing to allocate?',
+    answer: 'No, it may recommend increasing budget on certain campaigns if it believes that would be beneficial, but it will not increase expenditure without your explicit approval.',
+  },
+  {
     question: 'Can I cancel at any time?',
     answer: 'Yes. Monthly plans can be cancelled at any time. Annual plans run to the end of the billing year.',
   },
