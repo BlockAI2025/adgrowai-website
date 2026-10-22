@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <li><strong>Cookies:</strong> When you sign in to app.adgrowai.com, a sign-in token is stored in your browser&apos;s local storage and sent with each request. It expires after a limited time and is removed when you sign out. Our server may also set an httpOnly cookie containing the same token.</li>
         <li><strong>Advertising cookies on our website:</strong> www.adgrowai.com uses the Google Ads tag, which sets Google advertising cookies so we can measure our ads, and tells Google Ads when someone joins our waitlist. Google&apos;s use of this data is covered by its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>; you can manage ad personalisation in <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google&apos;s ad settings</a> or block these cookies in your browser.</li>
         <li><strong>AI Processing Data:</strong> When you use our AI features (Strategy Coach, keyword suggestions, recommendations and the questions we ask about your results), we send OpenAI&apos;s API only what each feature needs. Depending on the feature, that can be: a summary of your business profile (name, industry, services and the places you serve); the search terms people used before your ads showed, to check which are unrelated to your business; the names and kinds of results your Google Ads account records, to suggest answers to our questions; and campaign figures, to explain a recommendation in plain words. We never send your password or your Google or Meta login. Under OpenAI&apos;s API terms, data sent through the API is not used to train their models; OpenAI may keep it for up to 30 days to monitor for abuse. AI only words and suggests: every change to your ads needs your approval.</li>
-        <li><strong>Keyword Data:</strong> To show search volumes and typical costs per click, we send keywords and your target location to DataForSEO. We don&apos;t send your name, email address or account details.</li>
+        <li><strong>Keyword Data:</strong> To show search volumes and typical costs per click, and to check whether a search shows buying or research intent, we send keywords, search terms from your Google Ads account and your target location to DataForSEO. We don&apos;t send your name, email address or account details.</li>
       </ul>
 
       <h2>2. How We Use Your Information</h2>
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         <p>We access Google Ads data solely to display campaign metrics, generate insights, and suggest optimizations within the AdgrowAI dashboard.</p>
         <ul>
           <li>We do <strong>not</strong> sell Google Ads data.</li>
-          <li>We share it only with the service providers named in this policy that process it on our behalf to provide AdgrowAI&apos;s features. In particular, OpenAI receives the search terms, result names and campaign figures described in section 1 to power our AI features, under OpenAI&apos;s API terms, which do not allow that data to be used to train their models.</li>
+          <li>We share it only with the service providers named in this policy that process it on our behalf to provide AdgrowAI&apos;s features. In particular, OpenAI receives the search terms, result names and campaign figures described in section 1 to power our AI features, under OpenAI&apos;s API terms, which do not allow that data to be used to train their models, and DataForSEO receives search terms to return their search intent.</li>
           <li>We do <strong>not</strong> use Google Ads data for advertising, to build user profiles, to train AI models, or for purposes unrelated to the services you requested.</li>
           <li>You may disconnect your Google Ads account at any time through your account settings.</li>
         </ul>
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
       <p>We do <strong>not</strong> sell personal data. We may share information in the following circumstances:</p>
       <ul>
         <li><strong>AI Processing Providers:</strong> OpenAI processes the data described in section 1 to generate AI-powered recommendations, explanations and suggested answers. OpenAI acts as a data processor under their API Terms and does not use this data to train their models.</li>
-        <li><strong>Keyword Data Provider:</strong> DataForSEO receives keywords and target locations to return search volumes and costs per click. It does not receive your name, email address or account details.</li>
+        <li><strong>Keyword Data Provider:</strong> DataForSEO receives keywords, search terms and target locations to return search volumes, costs per click and search intent. It does not receive your name, email address or account details.</li>
         <li><strong>Service Providers:</strong> Third-party services (cloud hosting, email delivery, analytics) that process data on our behalf under strict confidentiality agreements.</li>
         <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental regulation.</li>
         <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, with notice to affected users.</li>
