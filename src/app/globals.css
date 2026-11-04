@@ -182,7 +182,7 @@
   .panel { border: 1px solid var(--line2); background: var(--bg2); box-shadow: var(--shadow); font-family: var(--mono); }
   .panel-bar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: .12em; color: var(--fg3); }
 
-  /* Form fields (contact form, sign in, sign up) */
+  /* Form fields (waitlist, contact and data deletion forms) */
   .field { display: flex; flex-direction: column; gap: 8px; }
   .field-label { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--fg3); }
   .input {
@@ -198,8 +198,6 @@
     transition: border-color .2s;
   }
   .input:focus { border-color: var(--acc); }
-  .input--icon { padding-left: 46px; }    /* room for a leading icon */
-  .input--toggle { padding-right: 50px; } /* room for a show/hide button */
 
   .form-error { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 14px; color: var(--warn); }
 

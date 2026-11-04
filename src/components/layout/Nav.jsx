@@ -3,14 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { NAV_LINKS, OTHER_LINKS, APP_LOGIN_URL } from '@/lib/site';
+import { NAV_LINKS, OTHER_LINKS, APP_URL } from '@/lib/site';
 import { Wordmark } from './Logo';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle, { useTheme } from './ThemeToggle';
 import WaitlistLink from './WaitlistLink';
 import styles from './Nav.module.css';
 
 export default function Nav() {
   const pathname = usePathname();
+  const theme = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const progressRef = useRef(null);
@@ -89,7 +90,9 @@ export default function Nav() {
 
         <div className={styles.actions}>
           <ThemeToggle />
-          <a href={APP_LOGIN_URL} className={styles.signIn}>SIGN IN</a>
+          {/* Sign in is in the app, which opens in the theme the website is showing. Registration is
+              invite-only, so sign up goes to the waitlist until the app's own sign-up opens. */}
+          <a href={`${APP_URL}/login?theme=${theme}`} className={styles.signIn}>SIGN IN</a>
           <WaitlistLink className={styles.signUp}>SIGN UP</WaitlistLink>
         </div>
       </div>
