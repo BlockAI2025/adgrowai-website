@@ -21,11 +21,12 @@ export const OTHER_LINKS = [
 export const CONTACT_EMAIL = 'admin@adgrowai.com';
 
 /**
- * Sign in happens in the app (existing customers). Sign up goes to the waitlist.
- * /signin, /login, /signup and /register redirect accordingly (next.config.mjs);
- * the forms in components/auth aren't connected to the backend.
+ * Sign in happens in the app (AdgrowAI-frontend), which talks to the backend. The
+ * nav's SIGN IN adds ?theme= so the app opens in the same theme. Registration is
+ * invite-only, so SIGN UP, /signup and /register go to the waitlist (next.config.mjs).
+ * Set NEXT_PUBLIC_APP_URL (e.g. in .env.local) to use a local copy of the app.
  */
-export const APP_LOGIN_URL = 'https://app.adgrowai.com/login';
+export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://app.adgrowai.com';
 
 /** Formspree endpoints that receive form submissions. */
 export const FORM_ENDPOINTS = {
