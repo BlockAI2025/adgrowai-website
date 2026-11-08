@@ -2,6 +2,9 @@ import { APP_URL } from './src/lib/site.js';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    agentUpgrade: 'security',
+  },
   async redirects() {
     return [
       // Privacy policy URLs from the previous site, which may be registered with Google/Meta.
